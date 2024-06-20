@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "k6loadtestfdfdfdfdffdfeer"
+    bucket         = "load-test-report-123sds"
     region         = "ap-south-1"
     key            = "terraform.tfstate"
     dynamodb_table = "Lock-Files"
