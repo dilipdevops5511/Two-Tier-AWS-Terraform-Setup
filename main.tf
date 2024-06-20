@@ -73,7 +73,7 @@ module "iam" {
 }
 
 module "autoscaling" {
-  source = "./modules/autoscaling"
+  source = "./modules/auto-scaling"
 
   ami_name              = var.AMI-NAME
   launch-template-name  = var.LAUNCH-TEMPLATE-NAME
