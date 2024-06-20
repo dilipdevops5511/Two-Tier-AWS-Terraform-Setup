@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "modules/vpc"
+  source = "/modules/vpc"
 
   vpc-name        = var.VPC-NAME
   vpc-cidr        = var.VPC-CIDR
@@ -24,7 +24,7 @@ module "vpc" {
 }
 
 module "security-group" {
-  source = "modules/securitygroup"
+  source = "/modules/securitygroup"
 
   vpc-name    = var.VPC-NAME
   alb-sg-name = var.ALB-SG-NAME
@@ -35,7 +35,7 @@ module "security-group" {
 }
 
 module "rds" {
-  source = "modules/rds"
+  source = "/modules/rds"
 
   sg-name              = var.SG-NAME
   private-subnet-name1 = var.PRIVATE-SUBNET1
@@ -50,7 +50,7 @@ module "rds" {
 }
 
 module "alb" {
-  source = "modules/alb-tg"
+  source = "/modules/alb-tg"
 
   public-subnet-name1 = var.PUBLIC-SUBNET1
   public-subnet-name2 = var.PUBLIC-SUBNET2
@@ -63,7 +63,7 @@ module "alb" {
 }
 
 module "iam" {
-  source = "modules/iam"
+  source = "/modules/iam"
 
   iam-role              = var.IAM-ROLE
   iam-policy            = var.IAM-POLICY
@@ -73,7 +73,7 @@ module "iam" {
 }
 
 module "autoscaling" {
-  source = "modules/autoscaling"
+  source = "/modules/autoscaling"
 
   ami_name              = var.AMI-NAME
   launch-template-name  = var.LAUNCH-TEMPLATE-NAME
@@ -89,7 +89,7 @@ module "autoscaling" {
 }
 
 module "route53" {
-  source = "modules/waf-cdn-acm-route53"
+  source = "/modules/waf-cdn-acm-route53"
 
   domain-name  = var.DOMAIN-NAME
   cdn-name     = var.CDN-NAME
