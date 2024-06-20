@@ -9,7 +9,7 @@ resource "aws_db_subnet_group" "db_subnet_group" {
 resource "aws_rds_cluster" "aurora_cluster" {
   cluster_identifier      = "aurora-cluster"
   engine                  = "aurora-mysql"
-  engine_version          = "8.0.mysql_aurora.3.02.2"
+  engine_version          = "8.0.mysql_aurora.3.05.2"
   master_username         = var.rds-username
   master_password         = var.rds-pwd
   backup_retention_period = 7
