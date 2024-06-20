@@ -12,7 +12,7 @@ data "aws_subnet" "private-subnet2" {
   }
 }
 
-data "aws_security_group" "db-sg" {
+data "aws_security_group" "db-sgg" {
   filter {
     name   = "tag:Names"
     values = [var.db-sg-name]
