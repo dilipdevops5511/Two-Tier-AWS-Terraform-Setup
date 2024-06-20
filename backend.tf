@@ -14,3 +14,6 @@ terraform {
     }
   }
 }
+
+
+#aws dynamodb create-table     --table-name Lock-Files     --attribute-definitions AttributeName=LockID,AttributeType=S     --key-schema AttributeName=LockID,KeyType=HASH     --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5     --region ap-south-1
