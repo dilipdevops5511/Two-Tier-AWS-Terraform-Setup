@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "k6loadtestfdfdfdfdffdfeer"
-    region         = "us-east-1"
+    region         = "ap-south-1"
     key            = "terraform.tfstate"
     dynamodb_table = "Lock-Files"
     encrypt        = true
